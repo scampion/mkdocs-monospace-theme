@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mkdocs-monoweb-theme"
-version = "1.1"
+version = "1.0.0"
 description = "Monoscape web theme for MkDocs"
 readme = "README.md"
 license = "BSD-2-Clause"
@@ -28,7 +28,11 @@ dependencies = [
 Source = "https://github.com/scampion/mkdocs-monoweb-theme"
 
 [project.entry-points."mkdocs.themes"]
-basictheme = "monoweb_theme"
+monoweb = "monoweb_theme"
 
 [tool.hatch.build]
 include = ["/monoweb_theme"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["monoweb_theme"]
+metadata-version = "2.1"
